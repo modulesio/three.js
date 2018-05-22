@@ -4,6 +4,9 @@ const sprite3d = ((
   })
 ) => {
 
+const NUM_POSITIONS_CHUNK = 150 * 1024;
+const pixelSize = 0.01;
+
 const _makeImageDataGeometry = (width, height, size, matrix, imageDataData) => {
   const halfSize = size / 2;
   const vertices = [
