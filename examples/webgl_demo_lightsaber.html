@@ -200,19 +200,6 @@
         };
       })();
 
-      const _getPixelVertices = (x, y, width, height, size) => {
-        const pixelVertices = _getPixelGeometryVertices(size);
-        for (let i = 0; i < CUBE_VERTICES; i += 3) {
-          pixelVertices[i] += (-(width / 2) + x + 1) * size;
-        }
-        for (let i = 1; i < CUBE_VERTICES; i += 3) {
-          pixelVertices[i] -= (-(height / 2) + y) * size;
-        }
-        for (let i = 2; i < CUBE_VERTICES; i += 3) {
-          pixelVertices[i] += size / 2;
-        }
-        return pixelVertices;
-      };
       const _makeImageDataGeometry = (width, height, size, matrix, imageDataData) => {
         const halfSize = size / 2;
         const vertices = [
